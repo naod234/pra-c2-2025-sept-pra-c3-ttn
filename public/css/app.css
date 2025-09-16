@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -47,6 +47,7 @@ html {
     font-family: sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -216,6 +217,7 @@ caption {
 
 th {
     text-align: inherit;
+    text-align: match-parent;
     text-align: -webkit-match-parent;
 }
 
@@ -10059,6 +10061,71 @@ main {
     padding-top: 1rem;
     padding-bottom: 2rem;
 }
+
+/* Homepage styling improvements */
+.jumbotron p {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    margin-bottom: 1rem !important;
+}
+
+.jumbotron h1 {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+}
+
+/* Brand list styling */
+.brand-list-container {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.brand-list-container h1 {
+    color: #495057 !important;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700 !important;
+}
+
+.brand-list-container h2 {
+    color: #6c757d !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.brand-list-container ul {
+    background-color: #ffffff;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.brand-list-container li {
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0;
+}
+
+.brand-list-container a {
+    color: #007bff !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.brand-list-container a:hover {
+    color: #0056b3 !important;
+    text-decoration: underline;
+    padding-left: 0.5rem;
+}
+
+/* Introduction text styling - removed duplicate since jumbotron p already handles this */
 
 /* Ensure proper text alignment */
 .text-center {
