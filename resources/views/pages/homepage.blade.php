@@ -19,7 +19,6 @@
     $chunk_size = ceil($size / $columns);
     ?>
 
-    <div class="container">
         <!-- Example row of columns -->
         <div class="row">
 
@@ -54,5 +53,4 @@
 
         </div>
 
-    </div>
 </x-layouts.app>

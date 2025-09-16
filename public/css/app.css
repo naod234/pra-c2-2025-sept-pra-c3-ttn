@@ -10023,5 +10023,49 @@ a.text-dark:hover, a.text-dark:focus {
 .breadcrumb > li + li:before {
     padding: 0 5px;
     color: #ccc;
-    content: "/ ";
+    content: "/ ";
+}
+
+/* Custom styles for the footer */
+.footer {
+    background-color: #343a40 !important; /* Dark background */
+    color: #ffffff !important; /* White text */
+    border-top: 1px solid #495057;
+}
+
+/* Ensure minimum height for body content */
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+/* Additional footer styling */
+.footer a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Container and layout improvements */
+.jumbotron {
+    margin-bottom: 2rem;
+}
+
+/* Better spacing for content */
+main {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* Ensure proper text alignment */
+.text-center {
+    text-align: center !important;
+}
+
+/* Improve readability with better line spacing */
+p, li {
+    line-height: 1.6;
 }

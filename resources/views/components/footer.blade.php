@@ -1,6 +1,10 @@
 
-<footer>
-	© {{ __('misc.copyright') }}
+<footer class="footer bg-dark text-light mt-auto py-4">
+    <div class="container">
+        <div class="text-center">
+            <small>© {{ __('misc.copyright') }}</small>
+        </div>
+    </div>
 </footer>
 
 

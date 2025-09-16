@@ -1,0 +1,22 @@
+/* Custom styles for the footer */
+.footer {
+    background-color: #343a40 !important; /* Dark background */
+    color: #ffffff !important; /* White text */
+    border-top: 1px solid #495057;
+}
+
+/* Ensure minimum height for body content */
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+/* Additional footer styling */
+.footer a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffffff
+   text-decoration: underline;
+}
