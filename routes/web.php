@@ -40,6 +40,14 @@ Route::get('/', function () {
     return view('pages.homepage', compact('brands'));
 })->name('home');
 
+//Ticket 04
+
+Route::get('/', function () {
+    $naam = "Tristan"; 
+    return view('welcome', ['naam' => $naam]);
+});
+
+
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);
 
@@ -47,6 +55,13 @@ Route::get('/datafeeds/{brand_slug}.xml', [RedirectController::class, 'datafeed'
 
 // Locale routes
 Route::get('/language/{language_slug}/', [LocaleController::class, 'changeLocale']);
+
+// ticket 9,10,11 routes voor ManualController
+
+Route::get('/manuals/{brand_id}/{brand_slug}/{manual_id}', [ManualController::class, 'show'])->name('manuals.show');
+Route::get('/manuals/top-10', [ManualController::class, 'topTen'])->name('manuals.topTen');
+Route::get('/manuals/top-per-brand', [ManualController::class, 'topPerBrand'])->name('manuals.topPerBrand');
+
 
 // List of manuals for a brand
 Route::get('/{brand_id}/{brand_slug}/', [BrandController::class, 'show']);

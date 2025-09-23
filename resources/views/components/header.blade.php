@@ -1,4 +1,6 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
+
+<p>Mijn naam is Tristan</p>
 <div class="jumbotron">
     <div class="container">
         <a href="/" title="{{ __('misc.home_alt') }}" alt="{{ __('misc.home_alt') }}">
