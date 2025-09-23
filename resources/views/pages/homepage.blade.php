@@ -6,20 +6,15 @@
         <p>{{ __('introduction_texts.homepage_line_3') }}</p>
     </x-slot:introduction_text>
 
-    <h1>
-        <x-slot:title>
-            {{ __('misc.all_brands') }}
-        </x-slot:title>
-    </h1>
+    <div class="brand-list-container">
+        <h1>{{ __('misc.all_brands') }}</h1>
 
+        <?php
+        $size = count($brands);
+        $columns = 3;
+        $chunk_size = ceil($size / $columns);
+        ?>
 
-    <?php
-    $size = count($brands);
-    $columns = 3;
-    $chunk_size = ceil($size / $columns);
-    ?>
-
-        <!-- Example row of columns -->
         <div class="row">
 
             @foreach($brands->chunk($chunk_size) as $chunk)
@@ -52,5 +47,6 @@
             @endforeach
 
         </div>
+    </div>
 
 </x-layouts.app>
