@@ -33,20 +33,13 @@ use App\Http\Controllers\ManualController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\ContactController;
 
 // Homepage
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
     return view('pages.homepage', compact('brands'));
 })->name('home');
-
-//Ticket 04
-
-Route::get('/', function () {
-    $naam = "Tristan"; 
-    return view('welcome', ['naam' => $naam]);
-});
-
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);
@@ -55,6 +48,10 @@ Route::get('/datafeeds/{brand_slug}.xml', [RedirectController::class, 'datafeed'
 
 // Locale routes
 Route::get('/language/{language_slug}/', [LocaleController::class, 'changeLocale']);
+
+// Contact routes
+Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 // ticket 9,10,11 routes voor ManualController
 
