@@ -53,6 +53,9 @@
                     <br>
                     <p><strong>Nieuwsbrief:</strong></p>
                     <p><a href="mailto:nieuwsbrief@4s-handleidingen.nl">Meld je aan voor onze nieuwsbrief</a></p>
+                    <br>
+                    <p><strong>Contact:</strong></p>
+                    <p><a href="{{ route('contact.show') }}">Contactformulier</a></p>
                 </div>
             </div>
         </div>

@@ -8,6 +8,39 @@
         </div>
     </x-slot:introduction_text>
 
+    <!-- Letter Navigation -->
+    <div class="letter-navigation">
+        <h3>Ga naar letter:</h3>
+        <div class="letter-links">
+            <?php
+            // Generate all available letters from the brands
+            $available_letters = [];
+            foreach($brands as $brand) {
+                $letter = strtoupper(substr($brand->name, 0, 1));
+                if (!in_array($letter, $available_letters)) {
+                    $available_letters[] = $letter;
+                }
+            }
+            sort($available_letters);
+            
+            // Generate A-Z navigation with available letters highlighted
+            $alphabet = range('A', 'Z');
+            foreach($alphabet as $index => $letter) {
+                if (in_array($letter, $available_letters)) {
+                    echo '<a href="#letter-' . $letter . '">' . $letter . '</a>';
+                } else {
+                    echo '<span class="letter-unavailable" style="color: rgba(255,255,255,0.3); padding: 0.5rem 0.8rem;">' . $letter . '</span>';
+                }
+                
+                // Add dash separator between all letters except the last one
+                if ($index < 25) {
+                    echo '<span class="separator">-</span>';
+                }
+            }
+            ?>
+        </div>
+    </div>
+
     <div class="brands-container">
         <h1>
             <x-slot:title>
@@ -32,7 +65,7 @@
 
                                 if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
                                     echo '</ul>
-                                    <h2>' . $current_first_letter . '</h2>
+                                    <h2 id="letter-' . $current_first_letter . '">' . $current_first_letter . '</h2>
                                     <ul>';
                                 }
                                 $header_first_letter = $current_first_letter

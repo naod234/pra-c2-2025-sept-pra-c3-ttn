@@ -171,3 +171,239 @@
     text-align: center;
     color: #95a5a6;
 }
+
+/* Letter Navigation */
+.letter-navigation {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.letter-navigation h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.letter-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-links a {
+    background: rgba(255, 255, 255, 0.2);
+    color: white !important;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    min-width: 35px;
+    text-align: center;
+}
+
+.letter-links a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.letter-links a.active {
+    background: white;
+    color: #2980b9 !important;
+    border-color: white;
+}
+
+.letter-links .separator {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0.3rem;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.letter-unavailable {
+    color: rgba(255, 255, 255, 0.3) !important;
+    padding: 0.5rem 0.8rem;
+    font-weight: 600;
+    font-size: 0.9em;
+    min-width: 35px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Responsive letter navigation */
+@media (max-width: 768px) {
+    .letter-navigation {
+        padding: 1rem;
+    }
+    
+    .letter-links {
+        gap: 0.3rem;
+    }
+    
+    .letter-links a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8em;
+        min-width: 30px;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Letter headers styling */
+.brand-column h2 {
+    color: #34495e;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+    scroll-margin-top: 100px; /* Account for fixed navigation if any */
+}
+
+/* Contact Page Styling */
+.contact-container {
+    margin-top: 1rem;
+}
+
+.contact-container h1 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-form-section {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.contact-form-section h3 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact-info-section {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    border-radius: 10px;
+    padding: 2rem;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-section h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.contact-item i {
+    font-size: 1.2em;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+    min-width: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #ecf0f1;
+    text-decoration: underline;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form .form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.contact-form .btn-primary {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.alert {
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.form-check-label a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.form-check-label a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive contact page */
+@media (max-width: 768px) {
+    .contact-form-section,
+    .contact-info-section {
+        padding: 1.5rem;
+    }
+    
+    .contact-item {
+        padding: 0.75rem;
+    }
+    
+    .contact-form .btn-primary {
+        width: 100%;
+    }
+}
