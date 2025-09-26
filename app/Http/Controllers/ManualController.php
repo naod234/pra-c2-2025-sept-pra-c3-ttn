@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Brand;
 use App\Models\Manual;
 
-// Ticket 9,10,11 
+
 
 class ManualController extends Controller
 {
