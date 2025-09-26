@@ -22,4 +22,15 @@ class BrandController extends Controller
             "manuals" => $manuals
         ]);
     }
+
+    // ticket 16
+    public function byLetter($letter)
+    {
+        // alle merken die beginnen met die letter
+        $brands = Brand::where('name', 'LIKE', $letter . '%')
+                        ->orderBy('name')
+                        ->get();
+
+        return view('brands.by-letter', compact('brands', 'letter'));
+    }
 }
